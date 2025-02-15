@@ -20,7 +20,7 @@ const TopRatedHome = () => {
   const handleFetch = async() => {
     setIsLoading(true);
     try {
-      const res = await axios.get('http://localhost:5900/api/v1/get_properties');
+      const res = await axios.get('https://www.apidemo.propsavvyrealtors.com/api/v1/get_properties');
       setProperties(res.data.data);
     } catch (error) {
       console.log("Internal server error", error);

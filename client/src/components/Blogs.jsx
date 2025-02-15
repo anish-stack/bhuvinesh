@@ -20,7 +20,7 @@ const Blogs = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get('http://localhost:5900/api/v1/get_blogs');
+      const response = await axios.get('https://www.apidemo.propsavvyrealtors.com/api/v1/get_blogs');
       setBlogs(response.data.data);
     } catch (error) {
       console.error('Error fetching blogs:', error);

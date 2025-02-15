@@ -18,7 +18,7 @@ const Properties = () => {
 
   const handleFetch = async () => {
     try {
-      const res = await fetch("http://localhost:5900/api/v1/get_properties");
+      const res = await fetch("https://www.apidemo.propsavvyrealtors.com/api/v1/get_properties");
       const data = await res.json();
       setProperties(data.data);
       setFilteredProperties(data.data);

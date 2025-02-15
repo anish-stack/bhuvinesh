@@ -6,7 +6,7 @@ import SingleProperty from "@/components/SingleProperty";
 export async function generateMetadata({ params }) {
   try {
     const { slug } = params;
-    const response = await axios.get(`http://localhost:5900/api/v1/get_property_slug/${slug}`);
+    const response = await axios.get(`https://www.apidemo.propsavvyrealtors.com/api/v1/get_property_slug/${slug}`);
     // console.log('API response:', response.data); // Ensure this shows the full structure
 
     if (!response.data || !response.data.data) {

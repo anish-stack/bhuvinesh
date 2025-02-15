@@ -27,7 +27,7 @@ const Banner = () => {
 
   const fetchBanner = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5900/api/v1/get_heroes")
+      const { data } = await axios.get("https://www.apidemo.propsavvyrealtors.com/api/v1/get_heroes")
       setBanner(data.data)
     } catch (error) {
       console.log("Internal server error", error)
@@ -36,7 +36,7 @@ const Banner = () => {
 
   const handleFetchlocation = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5900/api/v1/get_locations")
+      const { data } = await axios.get("https://www.apidemo.propsavvyrealtors.com/api/v1/get_locations")
       setLocation(data.data)
     } catch (error) {
       console.log("Internal server error", error)
@@ -45,7 +45,7 @@ const Banner = () => {
 
   const handleFetchType = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5900/api/v1/get_propertyTypes")
+      const { data } = await axios.get("https://www.apidemo.propsavvyrealtors.com/api/v1/get_propertyTypes")
       setType(data.data)
     } catch (error) {
       console.log("Internal server error", error)

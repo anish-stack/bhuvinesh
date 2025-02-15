@@ -13,7 +13,7 @@ const SingleBlog = ({ slug }) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:5900/api/v1/get_blog_by_slug/${slug}`
+        `https://www.apidemo.propsavvyrealtors.com/api/v1/get_blog_by_slug/${slug}`
       );
       setBlog(response.data.data);
     } catch (err) {

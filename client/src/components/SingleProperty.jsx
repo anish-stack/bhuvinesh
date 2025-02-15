@@ -33,7 +33,7 @@ const SingleProperty = ({ slug }) => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:5900/api/v1/get_property_slug/${slug}`
+        `https://www.apidemo.propsavvyrealtors.com/api/v1/get_property_slug/${slug}`
       );
       setProperty(data.data);
     } catch (error) {
@@ -64,7 +64,7 @@ const SingleProperty = ({ slug }) => {
       };
 
       await axios.post(
-        "http://localhost:5900/api/v1/create_property_inquery",
+        "https://www.apidemo.propsavvyrealtors.com/api/v1/create_property_inquery",
         propertyData
       );
 

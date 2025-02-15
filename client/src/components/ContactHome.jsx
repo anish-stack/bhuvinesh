@@ -16,7 +16,7 @@ const ContactHome = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5900/api/v1/create_inquery', formData);
+      const res = await axios.post('https://www.apidemo.propsavvyrealtors.com/api/v1/create_inquery', formData);
       toast.success(res.data.message);
       setFormData({
         name: '',
