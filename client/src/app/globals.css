@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.line-clamp-container {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  /* Ensures proper line breaking */
+}
+
+.line-clamp-container-single {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  /* Ensures proper line breaking */
+}
+
+
+
+@layer components {
+  .nav-link {
+    @apply text-slate-700 hover:text-slate-900 transition-colors duration-300 relative;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-[-2px] w-0 h-[2px] bg-slate-900 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .mobile-nav-link {
+    @apply text-slate-700 hover:text-slate-900 transition-colors duration-300;
+  }
+}
